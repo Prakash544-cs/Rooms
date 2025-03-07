@@ -1,0 +1,36 @@
+@import "variables";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: $primary-color;
+    color: white;
+    border-radius: 0 0 $border-radius $border-radius;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+
+    .button {
+        background: white;
+        color: $primary-color;
+        border: none;
+        padding: 10px 15px;
+        border-radius: $border-radius;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: darken(white, 10%);
+        }
+    }
+}

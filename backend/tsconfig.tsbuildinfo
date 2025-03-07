@@ -1,0 +1,1 @@
+{"root":["./src/db.ts","./src/server.ts","./src/routes/bookingroutes.ts","./src/routes/hotelroutes.ts"],"errors":true,"version":"5.8.2"}

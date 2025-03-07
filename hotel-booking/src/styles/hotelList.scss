@@ -1,0 +1,150 @@
+// 🌍 Global Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+// 📌 Hotel List Container (Centered)
+.hotel-list-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // ✅ Center everything
+}
+
+// 📌 Title
+.hotel-list-title {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+// ✅ Fix Filter Section Layout
+.hotel-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap; // Prevents wrapping
+
+  .hotel-input {
+    padding: 10px;
+    width: 250px; // ✅ Adjust width
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .hotel-button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #0056b3;
+    }
+  }
+}
+
+// ✅ Fix Hotel List Alignment (Centered)
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // ✅ Responsive grid
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+// 🏨 Individual Hotel Card
+.hotel-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    color: #333;
+    font-size: 1.2rem;
+  }
+
+  p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .book-now-button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #218838;
+    }
+  }
+}
+
+// 🛠️ No Hotels Available Message
+.no-hotels {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+// 📌 Responsive Styles for Small Screens
+@media (max-width: 768px) {
+  .hotel-filter {
+    flex-direction: column;
+    align-items: center;
+
+    .hotel-input {
+      width: 90%;
+    }
+
+    .hotel-button {
+      width: 90%;
+    }
+  }
+
+  // .hotel-list {
+  //   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Adjust for mobile
+  // }
+}
+
+@media (max-width: 480px) {
+  .hotel-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-input, .hotel-button {
+    width: 100%;
+  }
+}

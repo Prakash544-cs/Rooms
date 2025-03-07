@@ -1,0 +1,29 @@
+@import "variables";
+
+.manage-bookings-container {
+  padding: 20px;
+  .booking-list {
+    list-style: none;
+    padding: 0;
+    .booking-card {
+      padding: 15px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      button {
+        margin-right: 10px;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+      }
+      .edit-button {
+        background-color: #3498db;
+        color: white;
+      }
+      .delete-button {
+        background-color: #e74c3c;
+        color: white;
+      }
+    }
+  }
+}
